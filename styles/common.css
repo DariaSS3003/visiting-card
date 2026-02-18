@@ -1,0 +1,272 @@
+/* NULLING STYLES */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* --------------- */
+
+/* FONTS */
+@font-face {
+  font-family: "GothicLight";
+  src:
+    url("../fonts/Gothic-Light.woff2") format("woff2"),
+    url("../fonts/Gothic-Light.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GothicMedium";
+  src:
+    url("../fonts/Gothic-Medium.woff2") format("woff2"),
+    url("../fonts/Gothic-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GothicBold";
+  src:
+    url("../fonts/Gothic-Bold.woff2") format("woff2"),
+    url("../fonts/Gothic-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* COLORS */
+:root {
+  --bg: #fff;
+  --bgTransparent: rgba(50, 50, 50, 0.6);
+  --text: #1d1508;
+  --textLight: #9c6000;
+  --btn: #ffda61;
+  --btnHover: #ee9f00;
+  --line: #bcbcbc;
+  --GothicLight: "GothicLight", Arial, Helvetica, sans-serif;
+  --GothicMedium: "GothicMedium", Arial, Helvetica, sans-serif;
+  --GothicBold: "GothicBold", Arial, Helvetica, sans-serif;
+}
+
+/* DEFAULT FOR TEXT */
+
+*,
+body {
+  color: var(--text);
+}
+
+h1 {
+  font-family: var(--GothicBold);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+h2 {
+  font-family: var(--GothicMedium);
+  font-size: 36px;
+  font-weight: 500;
+}
+
+h3,
+a {
+  font-family: var(--GothicMedium);
+  font-size: 26px;
+  font-weight: 400;
+}
+
+p {
+  font-family: var(--GothicLight);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.link {
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s ease;
+
+  &:focus {
+    color: var(--btnHover);
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 32px;
+  border: 2px solid var(--btnHover);
+  background: var(--bg);
+  border-radius: 14px;
+
+  transition:
+    border-left 0.1s linear 0s,
+    border-top 0.1s linear 0.1s,
+    border-right 0.1s linear 0.2s,
+    border-bottom 0.1s linear 0.3s,
+    margin 0.1s linear;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    height: 0;
+    width: 0;
+    box-shadow: 0 0 0 0 var(--btn);
+    transition: all 0.4s linear;
+  }
+
+  &:active {
+    margin-top: 4px;
+  }
+}
+
+.btn__content {
+  font-family: var(--GothicMedium);
+  font-weight: 500;
+  position: inherit;
+  z-index: 20;
+  color: var(--btnHover);
+  transition: color 0.4s linear;
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    border: 2px solid var(--textLight);
+    &::before {
+      box-shadow: 0 0 0 300px var(--btn);
+    }
+
+    & > .btn__content {
+      color: var(--textLight);
+    }
+  }
+
+  .link:hover {
+    color: var(--btnHover);
+    border-bottom: 1px solid var(--btnHover);
+  }
+}
+
+@media screen and (max-width: 1460px) {
+  .container {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  .btn__content {
+    font-size: 20px;
+  }
+}

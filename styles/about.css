@@ -109,7 +109,7 @@
 }
 
 .about__info-btn {
-  & > .btn__content {
+  & > .btn-content {
     display: block;
   }
 }

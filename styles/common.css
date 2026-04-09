@@ -208,7 +208,7 @@ p {
   }
 }
 
-.btn__content {
+.btn-content {
   display: grid;
   grid-template-columns: 20px 1fr;
   gap: 8px;
@@ -241,7 +241,11 @@ p {
       box-shadow: 0 0 0 300px var(--btn);
     }
 
-    & > .btn__content {
+    & .btn-content {
+      color: var(--textLight);
+    }
+
+    & .btn-text {
       color: var(--textLight);
     }
   }
@@ -279,11 +283,11 @@ p {
     font-size: 24px;
   }
 
-  .btn__content {
+  .btn-content {
     font-size: 20px;
   }
 
-  .btn__content {
+  .btn-content {
     grid-template-columns: 16px 1fr;
   }
 }

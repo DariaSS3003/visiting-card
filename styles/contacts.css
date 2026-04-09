@@ -88,7 +88,7 @@
 }
 
 @media screen and (max-width: 800px) {
-  .contacts__form-btn > .btn__content {
+  .contacts__form-btn > .btn-content {
     grid-template-columns: 30px;
   }
 

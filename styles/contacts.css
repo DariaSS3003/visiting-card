@@ -90,6 +90,7 @@
 
   .contacts__form {
     height: auto;
+    display: flex;
     flex-direction: column;
 
     .btn {

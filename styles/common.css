@@ -213,6 +213,7 @@ p {
 }
 
 .btn__content {
+  display: inline-block;
   font-family: var(--GothicMedium);
   font-weight: 500;
   position: inherit;

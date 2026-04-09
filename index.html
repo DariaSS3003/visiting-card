@@ -33,11 +33,12 @@
     <link rel="stylesheet" href="./styles/achievements.css" />
     <link rel="stylesheet" href="./styles/projects.css" />
     <link rel="stylesheet" href="./styles/contacts.css" />
+    <link rel="stylesheet" href="./styles/top.css" />
     <title>Борознина Наталья Павловна</title>
   </head>
 
   <body>
-    <div class="wrapper">
+    <div class="wrapper" id="top">
       <div class="header-main">
         <header class="header">
           <div class="header__box container">
@@ -116,9 +117,11 @@
                   </p>
                 </div>
               </div>
-              <a href="#projects" class="about__info-btn btn">
-                <span class="btn__content">Мои проекты </span></a
-              >
+              <div class="about__btn">
+                <a href="#projects" class="about__info-btn btn">
+                  <span class="btn__content">Мои проекты </span></a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -187,18 +190,27 @@
       <section class="contacts" id="contacts">
         <div class="contacts__box container">
           <div class="contacts__content">
-            <h2 class="contacts__text">
-              Здесь Вы&nbsp;можете связаться со&nbsp;мной
-              <div class="contacts__cube"></div>
-            </h2>
-            <div class="contacts__form">
-              <a href="##" class="contacts__form-vk btn">
-                <div class="btn__content">написать мне во ВКонтакте</div>
-              </a>
-              <a href="##" class="contacts__form-tg btn">
-                <div class="btn__content">написать мне в Телеграмм</div>
-              </a>
+            <div class="contacts__block">
+              <h2 class="contacts__text">
+                Здесь Вы&nbsp;можете связаться со&nbsp;мной
+                <div class="contacts__cube"></div>
+              </h2>
+              <div class="contacts__form">
+                <a href="##" class="contacts__form-vk btn">
+                  <div class="btn__content">написать мне во ВКонтакте</div>
+                </a>
+                <a href="##" class="contacts__form-tg btn">
+                  <div class="btn__content">написать мне в Телеграмм</div>
+                </a>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="arrow">
+        <div class="arrow__box container">
+          <div class="arrow__scroll">
+            <a class="arrow__scroll-el" href="#top"></a>
           </div>
         </div>
       </section>

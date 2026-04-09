@@ -126,7 +126,11 @@
 
 @media screen and (max-width: 600px) {
   .contacts__form {
-    gap: 8px;
+    gap: 12px;
+  }
+
+  .contacts__block {
+    gap: 20px;
   }
 
   .contacts__title {

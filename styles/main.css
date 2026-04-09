@@ -60,7 +60,7 @@
   border: 2px solid var(--text);
   border-left: 2px solid transparent;
   border-top: 2px solid transparent;
-  border-radius: 2px;
+  border-radius: 4px;
   transition:
     border-bottom 0.1s linear 0s,
     border-right 0.1s linear 0.1s,

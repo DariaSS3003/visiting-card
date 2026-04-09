@@ -226,6 +226,14 @@ p {
   }
 }
 
+.btn-text {
+  font-size: 24px;
+  line-height: 100%;
+  font-weight: 500;
+  font-family: var(--GothicMedium);
+  color: var(--btnHover);
+}
+
 @media (hover: hover) {
   .btn:hover {
     border: 2px solid var(--textLight);

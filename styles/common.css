@@ -206,20 +206,24 @@ p {
     box-shadow: 0 0 0 0 var(--btn);
     transition: all 0.4s linear;
   }
-
-  &:active {
-    margin-top: 4px;
-  }
 }
 
 .btn__content {
-  display: inline-block;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 8px;
+  align-items: start;
   font-family: var(--GothicMedium);
   font-weight: 500;
   position: inherit;
   z-index: 20;
+  line-height: 100%;
   color: var(--btnHover);
   transition: color 0.4s linear;
+
+  img {
+    padding: 3px 0;
+  }
 }
 
 @media (hover: hover) {
@@ -269,5 +273,9 @@ p {
 
   .btn__content {
     font-size: 20px;
+  }
+
+  .btn__content {
+    grid-template-columns: 16px 1fr;
   }
 }

@@ -109,6 +109,9 @@
 }
 
 .about__info-btn {
+  & > .btn__content {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 1260px) {

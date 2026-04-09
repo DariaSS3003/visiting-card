@@ -49,18 +49,26 @@
 .contacts__form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-content: space-between;
+  grid-template-rows: 1fr;
   align-items: start;
   gap: 20px;
-  height: 60px;
+}
+
+.contacts__form-btn {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts__form-logo {
 }
 
 .contacts__form-vk {
-  text-align: center;
 }
 
 .contacts__form-tg {
-  text-align: center;
 }
 
 @keyframes rotateCube {

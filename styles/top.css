@@ -1,0 +1,68 @@
+.arrow {
+  position: relative;
+}
+
+.arrow__box {
+}
+
+.arrow__scroll {
+  margin-top: auto;
+  position: fixed;
+  bottom: 40px;
+  right: 4vw;
+  z-index: 500;
+  width: 30px;
+  height: 30px;
+  display: block;
+  cursor: pointer;
+
+  &:active {
+    .arrow__scroll-el {
+      border: 2px solid var(--btnHover);
+    }
+  }
+  &:focus {
+    .arrow__scroll-el {
+      border: 2px solid var(--btnHover);
+    }
+  }
+}
+
+.arrow__scroll-el {
+  display: block;
+  transition: all 0.2s ease;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--text);
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 2px;
+  transition:
+    border-left 0.1s linear 0s,
+    border-top 0.1s linear 0.1s,
+    border-right 0.1s linear 0.2s,
+    border-bottom 0.1s linear 0.3s;
+  rotate: 45deg;
+}
+
+/* hover */
+
+@media (hover: hover) {
+  .arrow__scroll:hover {
+    & > .arrow__scroll-el {
+      border: 2px solid var(--btnHover);
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .arrow__scroll {
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .arrow {
+    display: none;
+  }
+}

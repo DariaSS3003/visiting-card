@@ -21,6 +21,8 @@
 .about__swiper {
   position: relative;
   /* width: 540px; */
+  border-radius: 24px;
+  overflow: hidden;
 }
 
 .swiper {
